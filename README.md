@@ -5,13 +5,21 @@ A production-style distributed rate limiter built using Node.js, Redis, and Dock
 ## Architecture
 
 Client
+
    ↓
+   
 API Gateway (Express)
+
    ↓
+   
 Rate Limiter Service
+   
    ↓
+   
 Redis
+   
    ↓
+   
 Demo API
 
 ## Features
