@@ -1,4 +1,4 @@
-Distributed Rate Limiter System
+## Distributed Rate Limiter System
 
 A production-style distributed rate limiter built using Node.js, Redis, and Docker. The system implements Token Bucket and Sliding Window algorithms to control API traffic across distributed services.
 
