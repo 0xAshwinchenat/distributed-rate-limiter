@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  api-gateway:
+    build: ./api-gateway-express
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rate-limiter-service
+      - demo-api
+
+  rate-limiter-service:
+    build: ./rate-limiter-service
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+
+  demo-api:
+    build: ./demo-api
+    ports:
+      - "3001:3001"
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
